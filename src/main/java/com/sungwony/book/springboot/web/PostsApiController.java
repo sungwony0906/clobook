@@ -1,11 +1,14 @@
 package com.sungwony.book.springboot.web;
 
 import com.sungwony.book.springboot.service.posts.PostsService;
+import com.sungwony.book.springboot.web.dto.PostsListResponseDto;
 import com.sungwony.book.springboot.web.dto.PostsResponseDto;
 import com.sungwony.book.springboot.web.dto.PostsSaveRequestDto;
 import com.sungwony.book.springboot.web.dto.PostsUpdateRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -30,4 +33,5 @@ public class PostsApiController {
 
         return postsService.findById(id);
     }
+
 }
